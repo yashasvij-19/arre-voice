@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+.arreLogo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.arreLogo img {
+  height: 99px;
+  width: auto;
+  object-fit: contain;
+}
+
+.headerDivider {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+  height: 24px;
+}
+
+.headerDivider img {
+  height: 24px;
+  width: auto;
+}
+
+.navbarOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex: 1;
+  height: 100%;
+}
+
+.articlesOption,
+.studioOption,
+.voiceOption,
+.moreOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  height: 100%;
+}
+
+.articlesOption:hover,
+.studioOption:hover,
+.voiceOption:hover,
+.moreOption:hover {
+  opacity: 0.7;
+}
+
+.articlesOption span,
+.moreOption span {
+  font-family:fantasy;
+  font-size: 18px;
+  color: rgb(12, 12, 95);
+  margin-right: 6px;
+}
+
+.articlesOption img,
+.moreOption img {
+  height: 12px;
+  width: 12px;
+  transition: transform 0.2s ease;
+}
+
+.articlesOption:hover img,
+.moreOption:hover img {
+  transform: translateY(2px);
+}
+
+.studioOption a,
+.voiceOption a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.studioOption p,
+.voiceOption p {
+  font-family:fantasy;
+  font-size: 18px;
+  color: rgb(12, 12, 95);
+  margin: 0;
+}
+
+.navbarOptions .headerDivider {
+  margin: 0 8px;
+}
+
+.searchSection {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  height: 100%;
+}
+
+.searchSection:hover {
+  opacity: 0.7;
+}
+
+.searchSection img {
+  height: 20px;
+  width: 20px;
+  filter: brightness(0) saturate(100%);
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+/* Tablet view */
+@media (max-width: 768px) and (min-width: 426px) {
+  nav {
+    padding: 10px 20px;
+    min-height: 80px;
+    max-height: 80px;
+  }
+  
+  .navbarOptions {
+    gap: 24px;
+  }
+  
+  .articlesOption span,
+  .moreOption span,
+  .studioOption p,
+  .voiceOption p {
+    font-size: 13px;
+  }
+  
+  .arreLogo img {
+    height: 79px;
+  }
+}
+
+
+@media (max-width: 425px) {
+  nav {
+    padding: 8px 12px;
+    min-height: 60px;
+    max-height: 60px;
+  }
+  
+ .navbarOptions,.searchSection img, .headerDivider {
+    display: none;
+} 
+
+  .hamburgerMenu {
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+  }
+  
+  .hamburgerMenu img {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .searchSection {
+    display: flex !important;
+    margin-right: 4px;
+  }
+  
+  .searchSection img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .arreLogo img {
+    height: 59px;
+  }
+  
+  .navbarOptions {
+    gap: 10px;
+  }
+}
